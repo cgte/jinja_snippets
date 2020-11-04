@@ -1,0 +1,15 @@
+
+{{name}} has {{ name|length }} letters
+{# Jinja uses "filter" concept on iterables,
+for example in chemeleon
+    ${toto} is ${ len(toto) } letters long
+in jinja
+    {{toto}} is {{ toto | length }} letters long
+
+https://jinja.palletsprojects.com/en/2.11.x/templates/#list-of-builtin-filters
+
+{#
+    letters and {{ len(set(name)) }} different letters
+#}
+
+    and {{ name | unique | list | length  }} different letters
