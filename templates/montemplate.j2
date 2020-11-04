@@ -1,2 +1,16 @@
+
 Hello {{ name }}
+
+{# demo setting value #}
+
+{% set forty_two = 42 %}
+
+The answer to this question is  {{forty_two}}
+
+{# demo getting value from other template #}
+
+{%include 'data_stuff.j2' %}
+
+The list defined in other template is : {{ alist }}
+
 
