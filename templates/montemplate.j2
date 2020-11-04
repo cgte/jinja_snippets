@@ -11,6 +11,8 @@ The answer to this question is  {{forty_two}}
 
 {%include 'data_stuff.j2' %}
 
-The list defined in other template is : {{ alist }}
+{% import 'data_stuff.j2' as data_module %}
+
+The list defined in other template is : {{ data_module.alist }}
 
 
