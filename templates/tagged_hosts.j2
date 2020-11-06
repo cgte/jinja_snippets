@@ -1,0 +1,6 @@
+{% for tag, hosts  in groups.items() %}
+[{{tag}}]{% for host in hosts %}
+{{host}}{% endfor %}
+{% endfor %}
+
+
