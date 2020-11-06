@@ -24,7 +24,7 @@ tags = ["dev", "prepod", "integ", "valid", "prod"]
 
 class DummyNode:
     def __init__(self):
-        self.tags = random.choices(tags, k=random.randint(1, len(tags)))
+        self.tags = random.sample(tags, k=random.randint(1, len(tags)))
         self.name = (
             "".join(random.choices(string.ascii_lowercase, k=10))
             + "_"
