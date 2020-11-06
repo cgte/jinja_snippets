@@ -26,7 +26,7 @@ class DummyNode:
     def __init__(self):
         self.tags = random.sample(tags, k=random.randint(1, len(tags)))
         self.name = (
-            "".join(random.choices(string.ascii_lowercase, k=10))
+            "".join(random.choices(string.ascii_letters + string.digits, k=3))
             + "_"
             + "-".join(self.tags)
         )
@@ -34,7 +34,7 @@ class DummyNode:
     pass
 
 
-nodes = [DummyNode() for _ in range(10)]
+nodes = [DummyNode() for _ in range(5)]
 
 import operator  # noqa
 
